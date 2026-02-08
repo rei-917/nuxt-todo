@@ -21,12 +21,12 @@ const submitTodo = () => {
 <template>
   <div :class="styles.formContainer">
     <input
-      type="text"
       v-model="store.inputValue"
+      type="text"
       :class="styles.input"
       placeholder="新しいTodoを入力"
-    />
-    <button @click="submitTodo" :class="styles.button">
+    >
+    <button :class="styles.button" @click="submitTodo">
       {{ store.isEditing ? '更新' : '追加' }}
     </button>
   </div>
