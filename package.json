@@ -3,15 +3,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "nuxt build",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest",
-    "test:watch": "vitest --watch",
-    "test:unit": "vitest --project unit",
-    "test:nuxt": "vitest --project nuxt"
+    "test": "nuxt test",
+    "test:watch": "nuxt test --watch"
   },
   "dependencies": {
     "@nuxt/eslint": "^1.13.0",
@@ -24,6 +21,7 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^20.5.0",
     "vitest": "^3.2.4"
   }
 }
