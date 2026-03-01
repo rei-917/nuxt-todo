@@ -10,8 +10,8 @@ const editTodo = (id) => {
 <template>
   <div>
     <ul>
-      <li v-for="todo in store.todos" :class="styles.list" :key="todo.id">
-        <input type="checkbox" :id="`todo_checkbox_${todo.id}`" />
+      <li v-for="todo in store.todos"  :key="todo.id" :class="styles.list">
+        <input :id="`todo_checkbox_${todo.id}`" type="checkbox" >
         <label :for="`todo_checkbox_${todo.id}`" :class="styles.checked">{{
           todo.value
         }}</label>

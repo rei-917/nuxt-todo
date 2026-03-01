@@ -10,16 +10,16 @@ const todoStore = useTodoStore()
 <template>
   <div>
     <TodoForm
-      @todoEmit="todoStore.addTodos"
-      @editEmit="todoStore.editTodos"
-      :editProps="todoStore.editingTodo"
-      :isEditing="todoStore.isEditing"
+      :edit-props="todoStore.editingTodo"
+      :is-editing="todoStore.isEditing"
+      @todo-emit="todoStore.addTodos"
+      @edit-emit="todoStore.editTodos"
     />
     <TodoList
-      :todoProps="todoStore.todos"
-      :editProps="todoStore.editTodos"
-      :deleteProps="todoStore.deleteTodos"
-      @editEmit="todoStore.editTarget"
+      :todo-props="todoStore.todos"
+      :edit-props="todoStore.editTodos"
+      :delete-props="todoStore.deleteTodos"
+      @edit-emit="todoStore.editTarget"
     />
   </div>
 </template>
